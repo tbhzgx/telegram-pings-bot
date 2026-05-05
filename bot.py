@@ -274,7 +274,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message: discord.Message):
-    if message.author == client.user or message.author.bot:
+    if message.author == client.user:
         return
     if WATCHED_SERVERS and message.guild and message.guild.id not in WATCHED_SERVERS:
         return
